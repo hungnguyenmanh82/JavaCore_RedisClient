@@ -13,9 +13,9 @@ public class App2_Get_Set {
 		Jedis jedis = new Jedis("localhost"); //port default = 6379
 		System.out.println("Connection to server sucessfully"); 
 
-		jedis.set("tutorial-key", "value"); 
+		jedis.set("tutorial-key", "value"); //save (key, value) to HashMap
 
-		System.out.println("Stored string in redis:: "+ jedis.get("tutorial-key"));
+		System.out.println("Stored string in redis:: "+ jedis.get("tutorial-key"));  //get (key, value) from HashMap
 
 	}
 
