@@ -2,6 +2,9 @@ package redis.client;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import redis.clients.jedis.Jedis;
 
 /**
@@ -9,23 +12,25 @@ import redis.clients.jedis.Jedis;
  *
  */
 public class App3_List {
-
+	private static Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
-	      //Connecting to Redis server on localhost 
-	      Jedis jedis = new Jedis("localhost"); 
-	      System.out.println("Connection to server sucessfully"); 
-	      
-	      //store data in redis list 
-	      jedis.lpush("tutorial-list", "Redis"); 
-	      jedis.lpush("tutorial-list", "Mongodb"); 
-	      jedis.lpush("tutorial-list", "Mysql"); 
-	      
-	      // Get the stored data and print it 
-	      List<String> list = jedis.lrange("tutorial-list", 0 ,5); 
-	      
-	      for(int i = 0; i<list.size(); i++) { 
-	         System.out.println("Stored string in redis:: "+list.get(i)); 
-	      } 
+		String address = "localhost";
+		int port = 6379; //default Port = 6379
+
+		Jedis jedis = new Jedis(address,port); 
+		log.debug("Connection to server sucessfully"); 
+
+		//store data in redis list 
+		jedis.lpush("tutorial-list", "Redis"); 
+		jedis.lpush("tutorial-list", "Mongodb"); 
+		jedis.lpush("tutorial-list", "Mysql"); 
+
+		// Get the stored data and print it 
+		List<String> list = jedis.lrange("tutorial-list", 0 ,5); 
+
+		for(int i = 0; i<list.size(); i++) { 
+			log.debug("Stored string in redis:: "+list.get(i)); 
+		} 
 	}
 
 }

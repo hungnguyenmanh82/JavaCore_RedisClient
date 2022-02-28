@@ -7,6 +7,7 @@ encoding//src/main/java/redis/client/App2_Set_ExpireTime.java=UTF-8
 encoding//src/main/java/redis/client/App3_List.java=UTF-8
 encoding//src/main/java/redis/client/App3_ShowKeys.java=UTF-8
 encoding//src/main/resources=UTF-8
+encoding//src/main/resources/log4j2.component.properties=UTF-8
 encoding//src/test/java=UTF-8
 encoding//src/test/resources=UTF-8
 encoding/<project>=UTF-8

@@ -3,6 +3,9 @@ package redis.client;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import redis.clients.jedis.Jedis;
 
 /**
@@ -10,11 +13,14 @@ import redis.clients.jedis.Jedis;
  *
  */
 public class App2_Hashes {
-
+	private static Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
 
-		Jedis jedis = new Jedis("localhost"); //port default = 6379
-		System.out.println("Connection to server sucessfully"); 
+		String address = "localhost";
+		int port = 6379; //default Port = 6379
+
+		Jedis jedis = new Jedis(address,port); 
+		log.debug("Connection to server sucessfully"); 
 
 		Map<String, String> myMap = new HashMap<String, String>();
 		myMap.put("key1", "value1");
@@ -24,8 +30,8 @@ public class App2_Hashes {
 		jedis.hmset("keyMap", myMap);
 
 		Map<String, String> myMap2;
-		System.out.println("Stored string in redis:: "+ jedis.hmget("keyMap", "key1"));
-		System.out.println("Stored string in redis:: "+ jedis.hmget("keyMap", "key2"));
+		log.debug("Stored string in redis:: "+ jedis.hmget("keyMap", "key1"));
+		log.debug("Stored string in redis:: "+ jedis.hmget("keyMap", "key2"));
 
 	}
 

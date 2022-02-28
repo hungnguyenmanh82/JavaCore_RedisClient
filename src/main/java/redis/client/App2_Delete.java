@@ -1,5 +1,8 @@
 package redis.client;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import redis.clients.jedis.Jedis;
 
 /**
@@ -17,15 +20,19 @@ Vai trò chính của nó là Dictionary để search, mà nó ko tổ chức th
 
  */
 public class App2_Delete {
+	private static Logger log = LogManager.getLogger();
 
 	public static void main(String[] args) {
 
-		Jedis jedis = new Jedis("localhost"); //port default = 6379
-		System.out.println("Connection to server sucessfully"); 
+		String address = "localhost";
+		int port = 6379; //default Port = 6379
 
+		Jedis jedis = new Jedis(address,port); 
+		log.debug("Connection to server sucessfully"); 
+		
 		jedis.del("tutorial-key");  // hashmap (key, value)
 
-		System.out.println("Stored string in redis:: "+ jedis.get("tutorial-key"));
+		log.debug("Stored string in redis:: "+ jedis.get("tutorial-key"));
 
 	}
 

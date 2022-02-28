@@ -1,5 +1,8 @@
 package redis.client;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import redis.clients.jedis.Jedis;
 
 /**
@@ -7,11 +10,14 @@ import redis.clients.jedis.Jedis;
  *
  */
 public class App2_Set_ExpireTime {
-
+	private static Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
 		
-		Jedis jedis = new Jedis("localhost"); //port default = 6379
-		System.out.println("Connection to server sucessfully"); 
+		String address = "localhost";
+		int port = 6379; //default Port = 6379
+
+		Jedis jedis = new Jedis(address,port); 
+		log.debug("Connection to server sucessfully"); 
 		
 //		   * @param nxxx NX|XX, NX -- Only set the key if it does not already exist. XX -- Only set the key
 //		   *          if it already exist.
@@ -24,7 +30,7 @@ public class App2_Set_ExpireTime {
 		jedis.set("tutorial-key", "value");
 		jedis.expire("tutorial-key", 10); //10 second
 
-		System.out.println("Stored string in redis:: "+ jedis.get("tutorial-key"));
+		log.debug("Stored string in redis:: "+ jedis.get("tutorial-key"));
 
 	}
 
