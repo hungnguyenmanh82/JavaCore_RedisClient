@@ -5,11 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import redis.clients.jedis.Jedis;
 
-<<<<<<<< HEAD:src/main/java/redis/client/CRUD/App0_connect.java
 public class App0_connect {
-========
-public class App1_connect {
->>>>>>>> origin/master:src/main/java/redis/client/CRUD/App1_connect.java
 	private static final Logger log = LogManager.getLogger();
 
 	public static void main(String[] args) {

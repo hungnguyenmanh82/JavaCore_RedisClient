@@ -9,11 +9,9 @@ import redis.clients.jedis.Jedis;
  * SET,GET ở đây các key gắn value là Byte[] hoặc String.
  *
  */
-<<<<<<<< HEAD:src/main/java/redis/client/CRUD/App22_Set_ExpireTime.java
+
 public class App22_Set_ExpireTime {
-========
-public class App2_Set_ExpireTime {
->>>>>>>> origin/master:src/main/java/redis/client/CRUD/App2_Set_ExpireTime.java
+
 	private static final Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
 		
@@ -23,13 +21,6 @@ public class App2_Set_ExpireTime {
 		Jedis jedis = new Jedis(address,port); 
 		log.debug("Connection to server sucessfully"); 
 		
-//		   * @param nxxx NX|XX, NX -- Only set the key if it does not already exist. XX -- Only set the key
-//		   *          if it already exist.
-//		   * @param expx EX|PX, expire time units: EX = seconds; PX = milliseconds
-//		jedis.set("tutorial-key", "value","XX","EX",10); // = 10s expire 
-		
-
-		
 		//jedis.expire(key, seconds);
 		jedis.set("tutorial-key", "value");
 		jedis.expire("tutorial-key", 10); //10 second
@@ -37,5 +28,4 @@ public class App2_Set_ExpireTime {
 		log.debug("Stored string in redis:: "+ jedis.get("tutorial-key"));
 
 	}
-
 }

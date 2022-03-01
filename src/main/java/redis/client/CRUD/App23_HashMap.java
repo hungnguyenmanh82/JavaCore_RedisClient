@@ -12,11 +12,7 @@ import redis.clients.jedis.Jedis;
  * SET,GET ở đây các key gắn value là Byte[] hoặc String.
  *
  */
-<<<<<<<< HEAD:src/main/java/redis/client/CRUD/App23_HashMap.java
 public class App23_HashMap {
-========
-public class App2_Hashes {
->>>>>>>> origin/master:src/main/java/redis/client/CRUD/App2_Hashes.java
 	private static final Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
 

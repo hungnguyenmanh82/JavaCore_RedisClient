@@ -19,11 +19,7 @@ Từ Redis Client ta sẽ connect tơi redis server để thực hiện các tha
 Vai trò chính của nó là Dictionary để search, mà nó ko tổ chức theo table nên gọi là No-SQL.
 
  */
-<<<<<<<< HEAD:src/main/java/redis/client/CRUD/App31_Delete.java
 public class App31_Delete {
-========
-public class App2_Delete {
->>>>>>>> origin/master:src/main/java/redis/client/CRUD/App2_Delete.java
 	private static final Logger log = LogManager.getLogger();
 
 	public static void main(String[] args) {

@@ -11,11 +11,7 @@ import redis.clients.jedis.Jedis;
  * ở đây Key gắn với 1 List
  *
  */
-<<<<<<<< HEAD:src/main/java/redis/client/CRUD/App24_List.java
 public class App24_List {
-========
-public class App3_List {
->>>>>>>> origin/master:src/main/java/redis/client/CRUD/App3_List.java
 	private static final Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
 		String address = "localhost";

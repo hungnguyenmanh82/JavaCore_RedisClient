@@ -12,11 +12,7 @@ import redis.clients.jedis.Jedis;
  * Hiển thị tất cả các keys mà các client đăng ký với server
  *
  */
-<<<<<<<< HEAD:src/main/java/redis/client/CRUD/App41_ShowKeys.java
 public class App41_ShowKeys {
-========
-public class App3_ShowKeys {
->>>>>>>> origin/master:src/main/java/redis/client/CRUD/App3_ShowKeys.java
 	private static final Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
 		String address = "localhost";
