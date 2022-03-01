@@ -1,4 +1,4 @@
-package redis.client;
+package redis.client.CRUD;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +10,7 @@ import redis.clients.jedis.Jedis;
  *
  */
 public class App2_Set_ExpireTime {
-	private static Logger log = LogManager.getLogger();
+	private static final Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
 		
 		String address = "localhost";

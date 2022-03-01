@@ -35,6 +35,7 @@
 		<Property name="LOG_PATTERN_9">[%-6p] (%c{1}.java:1) - %m%n</Property>
 		<!-- %tid: threadId, %tn threadName, %tp ThreadPriority-->
 		<Property name="LOG_PATTERN_10">%tid:%tn:%tp [%-6p] %c{1}.%M(%F:%L) - %m%n</Property>
+		<Property name="LOG_PATTERN_11">%d{yyyy-MM-dd HH:mm:ss.SSS} %tid:%tn:%tp [%-6p] %c{1}.%M(%F:%L) - %m%n</Property>
 
 		<Property name="basePath">C:\\logs</Property>
 		<Property name="basePath1">.</Property>
@@ -42,7 +43,7 @@
 
 	<Appenders>
 		<Console name="console" target="SYSTEM_OUT">
-			<PatternLayout pattern="${LOG_PATTERN_7}" />
+			<PatternLayout pattern="${LOG_PATTERN_11}" />
 		</Console>
 	</Appenders>
 

@@ -1,12 +1,11 @@
-package redis.client;
+package redis.client.transaction;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import redis.clients.jedis.Jedis;
 
-public class App1_connect {
-	private static Logger log = LogManager.getLogger();
+public class App1_transaction {
+	private static final Logger log = LogManager.getLogger();
 
 	public static void main(String[] args) {
 

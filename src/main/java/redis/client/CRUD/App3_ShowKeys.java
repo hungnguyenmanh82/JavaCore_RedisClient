@@ -1,4 +1,4 @@
-package redis.client;
+package redis.client.CRUD;
 
 import java.util.Iterator;
 import java.util.List;
@@ -14,7 +14,7 @@ import redis.clients.jedis.Jedis;
  *
  */
 public class App3_ShowKeys {
-	private static Logger log = LogManager.getLogger();
+	private static final Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
 		String address = "localhost";
 		int port = 6379; //default Port = 6379

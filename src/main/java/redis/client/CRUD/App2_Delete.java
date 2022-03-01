@@ -1,4 +1,4 @@
-package redis.client;
+package redis.client.CRUD;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,7 +20,7 @@ Vai trò chính của nó là Dictionary để search, mà nó ko tổ chức th
 
  */
 public class App2_Delete {
-	private static Logger log = LogManager.getLogger();
+	private static final Logger log = LogManager.getLogger();
 
 	public static void main(String[] args) {
 

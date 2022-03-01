@@ -1,4 +1,4 @@
-package redis.client;
+package redis.client.CRUD;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +13,7 @@ import redis.clients.jedis.Jedis;
  *
  */
 public class App2_Hashes {
-	private static Logger log = LogManager.getLogger();
+	private static final Logger log = LogManager.getLogger();
 	public static void main(String[] args) {
 
 		String address = "localhost";
